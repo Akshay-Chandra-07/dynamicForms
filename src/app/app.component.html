@@ -1,0 +1,17 @@
+<form [formGroup]="quizForm" class="main">
+  <div formArrayName ="questions" class="questions">
+    <div *ngFor="let q of quizForm.controls.questions.controls;let i = index" [formGroupName]="i" class="question">
+      <input type="text" placeholder="Question" formControlName="question">
+      <button *ngIf="quizForm.controls.questions.length > 1" (click)="delQuestion(i)">Delete Question</button>
+      <div *ngFor="let o of q.controls.options.controls;let j=index" formArrayName="options">
+        <div [formGroupName]="j">
+          <input type="text" placeholder="Option" formControlName="option">
+            <button (click)="addOption(i)">Add Option</button>
+            <button *ngIf="q.controls.options.controls.length > 1" (click)="delOption(i,j)">Delete Option</button>
+        </div>
+      </div>
+    </div>
+    <button (click)="addQuestion()" class="addbtn">Add Question</button>
+  </div>
+  <button type="submit" [disabled]="quizForm.invalid" (click)="onSubmit(quizForm)" class="submitbtn">Submit</button>
+</form>

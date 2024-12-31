@@ -1,0 +1,22 @@
+.main{
+    padding: 0;
+    margin: 0;
+}
+
+.questions{
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.question{
+    padding: 1rem;
+    /* border: 1px solid red; */
+}
+
+.addbtn{
+    margin:10px
+}
+
+.submitbtn{
+    margin:10px;
+}
