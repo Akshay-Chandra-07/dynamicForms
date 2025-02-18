@@ -4,9 +4,13 @@ require('./src/config/db')
 const questionRoute = require('./src/routes/questionRoute')
 const app = express()
 
-app.use(cors())
-app.use(express.json())
-
+app.use(cors()) // create cors error?
+app.use(express.json()) // `express.json()` use case?
+// why do we need lock.json file?
+// middlewares in api level?
+// create global error handler? 
+// insert nested data in db?
+// input: {id: 1, name: "question1", options: [{option: "option1"}, {option: "option2"}]}
 app.use('/api/questions',questionRoute)
 
 

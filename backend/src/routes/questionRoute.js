@@ -4,6 +4,6 @@ const questionController = require('../controllers/questionController')
 const router = express.Router()
 
 router.post('/post',questionController.create)
-router.get('/get',questionController.call)
+router.get('/api',questionController.call)
 
 module.exports = router

@@ -9,3 +9,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient()
   ]
 };
+
+/**
+ * `provideZoneChangeDetection` and `eventCoalescing` prop use case
+ */
